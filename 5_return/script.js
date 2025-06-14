@@ -27,4 +27,8 @@ function val2(){
  // output me 
  // sab clear ho jaega or agli line me undefined
 
+ // undefined is a value - ye value tab di jati he jab variable ko koi value na mili he iska matlub ise hum ek garbage bvalue ki trha treat karte he or ise default value bhi kah skte he
+ // not defined is an error - let supose hamne a nahi bnaya or console.log(a) kar dia to wo eror ayega not defined
+
+ // null is also a value - jese insta pe username search kia jo ho hi na to null ayega , matlub kisi cheez ko dhunda ab wo exist hi nahi karta he to null
  
