@@ -1,58 +1,115 @@
-//functions
-//javascript has 2 main types
-// es5 and es6
-// es5 me functions ke 3 prakar the function statements, function expressions, anonymous functions
-// es6 me ek prakar he jo 3 prakar me divide he 
-// es6 me 1 prakar he fat arrow function or ise 3 treeko se likh sakte he jo he (a) basic fat arrow (b) fat arrow with one param (c)fat arrow with iimplicit return
+// JavaScript Functions — ES5 and ES6
 
-// functions - js me functions normal programming language jese nahi he , iska matlub hai yaha par js me functions banane ke lie type nahi btana padta he or ap use koi bhi nam deke bna sakte ho
-// jese java me btana padta he na int void ki fucntion kya return krega int ya void
-// js me function first class ka darja dia gya he jiska matlab he ki js me functions ko value/ variable ki trha treat kia ja sakta hai
+// Functions in JavaScript
+// Functions are reusable blocks of code used to perform specific tasks.
+// JavaScript allows defining functions without specifying return types (like int, void in Java).
+// Functions in JS are treated as first-class citizens — they can be stored in variables, passed as arguments, and returned from other functions.
 
-//what is function
-// koi esa code jo apko bar bar use karna heo ya fir koi esa code jisko turant na chalana ho par kabhi chalana ho use function me dal sakte he 
+// Two major function styles in JS: ES5 and ES6
 
-function webdev(){
+// ==============
+// ES5 FUNCTIONS
+// ==============
+
+// 1. Function Statement (a named function)
+function webdev() {
     console.log("Learn Js");
     console.log("Learn React");
     console.log("Learn MongoDb");
     console.log("Learn Node");
     console.log("You are ready to create a web");
 }
-webdev();
+webdev();  // calling the function
 
-// why we need
-// to resuse code and wrap the code which we want to run in future at some point of time
+// 2. Function Expression (function stored in a variable)
+var abcd = function () {
+    // function body here
+};
 
-// how to use 
-function abcd(){your code}
+// 3. Anonymous Function (function without a name — usually used inside expressions)
+// function() {
+//     // Not valid on its own, must be assigned or passed
+// }
 
-//extras we should know 
-// parameters and arguments
+// ========================
+// PARAMETERS vs ARGUMENTS
+// ========================
+
+// Parameters are placeholders when defining a function
+function greet(val) {
+    console.log("Hello", val);
+}
+
+// Arguments are actual values passed when calling the function
+greet("Sourabh");     // "Sourabh" is an argument
+
+// Functions can also accept another function as an argument
+function runTask(task) {
+    task(); // calling the passed function
+}
+runTask(function() {
+    console.log("Running passed function");
+});
+
+// ==============================
+// ES6 ARROW FUNCTIONS (Fat Arrow)
+// ==============================
+
+// 1. Basic Arrow Function
+var a = () => {
+    console.log("Basic arrow function");
+};
+
+// 2. Arrow Function with One Parameter
+var g = (val) => {
+    console.log("Received:", val);
+};
+g(12);
+
+// Alternate syntax (no brackets for one parameter)
+var g = val => {
+    console.log("Received:", val);
+};
+g(12);
+
+// 3. Implicit Return (no curly braces or 'return' keyword)
+var username = () => "Sourabh";
+var ans = username(); // Returns "Sourabh"
+console.log(ans);
+
+// ==============================
+// Why Use Functions?
+// ==============================
+// Reuse code
+// Organize code into logical blocks
+// Delay execution — run later when needed
+
+// ==============================
+// Interview Quick Prep
+// ==============================
+
 /*
-supose hamne function bnaya then function ko chaltae waqt hum koi bhi value ko bhej akte he jese yaha 12 bheja or function bhi bhej sakte he 
-yaha (val) ye ek varuiable he or yaha hum ise parameetar kahte he 
-function abcd(val){
-}
-abcd(12);
-abcd(b())
-or yaha ye jo 12 bheja he wo argument ho gya
-// to kahne ka matlub ye he ki jab hum function define krte waqt parametar bante he or jab use run karte he us time hum un parameetar me argumets ko pass kar sakte he 
-*/ 
-/*
-preap for interview
-1.) function statement 
-function abcd(){
-    // function statement
+1. Function Statement:
+function abcd() {
+    // Code here
 }
 
-2.) function expression
-var abcd = function(){
-    // function expression
-}
+2️. Function Expression:
+var abcd = function () {
+    // Code here
+};
 
-3.) anonymous function
-function(){
-    // anonymous function
-}
+3️. Anonymous Function (used inline):
+setTimeout(function () {
+    console.log("Executed after delay");
+}, 1000);
 */
+
+// Real-World Use Case:
+// Use functions to group repeated tasks — like validating forms, performing API calls, etc.
+
+// Summary:
+// - JS functions don’t need return types like other languages.
+// - They can be stored in variables and passed around (first-class).
+// - ES5 introduced standard functions; ES6 added arrow functions with cleaner syntax.
+// - Parameters = placeholders, Arguments = real values.
